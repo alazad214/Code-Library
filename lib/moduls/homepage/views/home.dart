@@ -3,7 +3,7 @@ import 'package:code_library/moduls/homepage/views/home_title_text.dart';
 import 'package:code_library/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../Filter search/filter_search_screen.dart';
+import '../../Filter search/withOut getx/filter_search_screen.dart';
 import '../../dropdowntextfield/views/single_item_dropdown.dart';
 
 class Home extends StatelessWidget {
@@ -35,9 +35,15 @@ class Home extends StatelessWidget {
               },
             ),
             CustomButton(
-              text: "List Filter search",
+              text: "Filter search",
               ontap: () {
-                Get.to(() => PropertyListScreen());
+                Get.to(() => const PropertyListScreen());
+              },
+            ),
+            CustomButton(
+              text: "Filter search-getx",
+              ontap: () {
+                Get.to(() => const PropertyListScreen());
               },
             ),
           ],

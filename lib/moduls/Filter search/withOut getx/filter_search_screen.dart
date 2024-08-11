@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class PropertyListScreen extends StatefulWidget {
-  PropertyListScreen({super.key});
+  const PropertyListScreen({super.key});
 
   @override
   State<PropertyListScreen> createState() => _PropertyListScreenState();
@@ -47,7 +46,7 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Properties'),
+        title: const Text('Filter Search'),
       ),
       body: Column(
         children: [

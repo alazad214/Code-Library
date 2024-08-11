@@ -25,9 +25,8 @@ class PropertyController extends GetxController {
       foundItem.value = myItem;
     } else {
       foundItem.value = myItem
-          .where((user) => user["name"]
-          .toLowerCase()
-          .contains(enteredKeyword.toLowerCase()))
+          .where((user) =>
+              user["name"].toLowerCase().contains(enteredKeyword.toLowerCase()))
           .toList();
     }
   }

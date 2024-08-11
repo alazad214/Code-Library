@@ -3,6 +3,7 @@ import 'package:code_library/moduls/homepage/views/home_title_text.dart';
 import 'package:code_library/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../Filter search/With getx/getx_search_page.dart';
 import '../../Filter search/withOut getx/filter_search_screen.dart';
 import '../../dropdowntextfield/views/single_item_dropdown.dart';
 
@@ -41,9 +42,9 @@ class Home extends StatelessWidget {
               },
             ),
             CustomButton(
-              text: "Filter search-getx",
+              text: "Filter search getx",
               ontap: () {
-                Get.to(() => const PropertyListScreen());
+                Get.to(() => PropertyListScreen2());
               },
             ),
           ],

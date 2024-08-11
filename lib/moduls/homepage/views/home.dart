@@ -8,6 +8,7 @@ import '../../Filter search/With getx/getx_search_page.dart';
 import '../../Filter search/withOut getx/filter_search_screen.dart';
 import '../../Textfield/views/textfield_screen.dart';
 import '../../dropdowntextfield/views/single_item_dropdown.dart';
+import '../../favourite card/views/favourite_screen.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -59,6 +60,12 @@ class Home extends StatelessWidget {
               text: "Provider",
               ontap: () {
                 Get.to(() => const ProviderScreen());
+              },
+            ),
+            CustomButton(
+              text: "Favourite item",
+              ontap: () {
+                Get.to(() =>  ItemListScreen());
               },
             ),
           ],

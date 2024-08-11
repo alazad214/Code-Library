@@ -2,7 +2,8 @@ import 'package:code_library/moduls/dropdowntextfield/views/dropdown_screen.dart
 import 'package:code_library/moduls/homepage/views/home_title_text.dart';
 import 'package:code_library/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import '../../Filter search/filter_search_screen.dart';
 import '../../dropdowntextfield/views/single_item_dropdown.dart';
 
 class Home extends StatelessWidget {
@@ -24,14 +25,19 @@ class Home extends StatelessWidget {
             CustomButton(
               text: "Dropdown Textfield",
               ontap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => const TestPage()));
+                Get.to(() => const TestPage());
               },
-            ),    CustomButton(
+            ),
+            CustomButton(
               text: "Single item dropdown",
               ontap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) =>  SingleItemDropdown()));
+                Get.to(() => SingleItemDropdown());
+              },
+            ),
+            CustomButton(
+              text: "List Filter search",
+              ontap: () {
+                Get.to(() => PropertyListScreen());
               },
             ),
           ],

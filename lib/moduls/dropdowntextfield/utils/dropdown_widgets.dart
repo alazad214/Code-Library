@@ -7,11 +7,11 @@ class DropdownWidget extends StatelessWidget {
   final String hintText;
   final DropdownController controller;
   const DropdownWidget({
-    super.key,
+    Key? key,
     required this.dropDownList,
     this.hintText = "Select an option",
     required this.controller,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -34,20 +34,24 @@ class ItemListScreen extends StatelessWidget {
               margin: EdgeInsets.all(8.0),
               child: ListTile(
                 leading: InkWell(
-                    onTap: () {
-                      controller.toggleFavorite(item.id);
-                    },
-                    child: Icon(item.isFavorite
-                        ? Icons.favorite
-                        : Icons.favorite_border)),
+                  onTap: (){
+                    controller.toggleFavorite(item.id);
+                  },
+                  child: Icon(
+                      item.isFavorite ? Icons.favorite : Icons.favorite_border),
+                ),
                 title: Text(item.name),
                 subtitle: Text(item.title),
+
                 trailing: IconButton(
                   icon: Icon(Icons.arrow_forward),
                   onPressed: () {
                     Get.to(() => DetailsScreen(item: item));
                   },
                 ),
+                onLongPress: () {
+                  controller.toggleFavorite(item.id);
+                },
               ),
             );
           },

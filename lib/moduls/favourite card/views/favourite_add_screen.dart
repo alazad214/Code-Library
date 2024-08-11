@@ -6,8 +6,7 @@ import '../controller/favourite_controller.dart';
 class FavoriteItemsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final ItemController controller =
-        Get.put(ItemController()); // Retrieve existing controller
+    final ItemController controller = Get.put(ItemController());
 
     return Scaffold(
       appBar: AppBar(

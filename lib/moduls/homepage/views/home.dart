@@ -1,6 +1,5 @@
 import 'package:code_library/moduls/dropdowntextfield/views/dropdown_screen.dart';
 import 'package:code_library/moduls/homepage/views/home_title_text.dart';
-import 'package:code_library/moduls/provider/screen/provider_screen.dart';
 import 'package:code_library/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -57,15 +56,9 @@ class Home extends StatelessWidget {
               },
             ),
             CustomButton(
-              text: "Provider",
-              ontap: () {
-                Get.to(() => const ProviderScreen());
-              },
-            ),
-            CustomButton(
               text: "Favourite item",
               ontap: () {
-                Get.to(() =>  ItemListScreen());
+                Get.to(() => ItemListScreen());
               },
             ),
           ],

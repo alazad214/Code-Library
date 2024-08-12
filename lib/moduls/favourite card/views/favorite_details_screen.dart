@@ -1,6 +1,6 @@
 import 'package:code_library/moduls/favourite%20card/utils/fav_item.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 
 class DetailsScreen extends StatelessWidget {
   final FavItem item;

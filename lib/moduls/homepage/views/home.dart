@@ -1,3 +1,4 @@
+import 'package:code_library/moduls/api/api_screen.dart';
 import 'package:code_library/moduls/dropdowntextfield/views/dropdown_screen.dart';
 import 'package:code_library/moduls/homepage/views/home_title_text.dart';
 import 'package:code_library/widgets/custom_button.dart';
@@ -59,6 +60,12 @@ class Home extends StatelessWidget {
               text: "Favourite item",
               ontap: () {
                 Get.to(() => ItemListScreen());
+              },
+            ),
+            CustomButton(
+              text: "api integration",
+              ontap: () {
+                Get.to(() => ApiScreen());
               },
             ),
           ],

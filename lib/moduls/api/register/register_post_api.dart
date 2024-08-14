@@ -1,32 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
+import 'package:get/get.dart';
+import 'auth_controller.dart';
 
-class RegisterPostApi extends StatefulWidget {
-  const RegisterPostApi({super.key});
+class RegisterPostApi extends StatelessWidget {
+  RegisterPostApi({Key? key}) : super(key: key);
 
-  @override
-  State<RegisterPostApi> createState() => _RegisterPostApiState();
-}
-
-class _RegisterPostApiState extends State<RegisterPostApi> {
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
-
-  void postRegister(String email, password) async {
-    try {
-      Response response = await post(
-          Uri.parse("https://reqres.in/api/register"),
-          body: {"email": email, "password": password});
-
-      if (response.statusCode == 200) {
-        print("Successfully register");
-      } else {
-        print("Faild register");
-      }
-    } catch (e) {
-      print(e.toString());
-    }
-  }
+  final AuthController controller = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -38,22 +17,29 @@ class _RegisterPostApiState extends State<RegisterPostApi> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextFormField(
-                controller: emailController,
+                controller: controller.emailController,
                 decoration: InputDecoration(
-                    hintText: "email", prefixIcon: Icon(Icons.email)),
+                  hintText: "email",
+                  prefixIcon: Icon(Icons.email),
+                ),
               ),
               TextFormField(
-                controller: passwordController,
+                controller: controller.passwordController,
                 decoration: InputDecoration(
-                    hintText: "password", prefixIcon: Icon(Icons.password)),
+                  hintText: "password",
+                  prefixIcon: Icon(Icons.password),
+                ),
               ),
               SizedBox(height: 20.0),
               ElevatedButton(
-                  onPressed: () {
-                    postRegister(emailController.text.toString(),
-                        passwordController.text.toString());
-                  },
-                  child: Text("Register"))
+                onPressed: () {
+                  controller.postRegister(
+                    controller.emailController.text,
+                    controller.passwordController.text,
+                  );
+                },
+                child: Text("Register"),
+              ),
             ],
           ),
         ),

@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
 import '../controller/favourite_controller.dart';
 import 'favorite_details_screen.dart';
 import 'favourite_add_screen.dart';

@@ -139,7 +139,7 @@ class _TestPageState extends State<TestPage> {
                     // displayCompleteItem: true,
                     checkBoxProperty: CheckBoxProperty(
                         fillColor:
-                            MaterialStateProperty.all<Color>(Colors.red)),
+                            WidgetStateProperty.all<Color>(Colors.red)),
                     dropDownList: const [
                       DropDownValueModel(name: 'name1', value: "value1"),
                       DropDownValueModel(

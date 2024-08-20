@@ -40,6 +40,9 @@ dependencies:
   shared_preferences:
   provider:
   http: ^1.2.2
+  just_audio: ^0.9.39
+  google_maps_flutter: ^2.9.0
+  location: ^7.0.0
 
 dev_dependencies:
   flutter_test:
